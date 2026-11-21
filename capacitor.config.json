@@ -1,0 +1,6 @@
+{
+  "appId": "com.sany.businessmargin",
+  "appName": "Sany's Business Margin",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
