@@ -91,4 +91,7 @@ function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&l
 document.querySelectorAll(".nav-item").forEach(b=>b.addEventListener("click",()=>setTab(b.dataset.tab)));
 $("#themeBtn").onclick=toggleTheme;if(localStorage.getItem("sbm-dark")==="true")document.body.classList.add("dark");
 if("serviceWorker"in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
-await seedIfEmpty();await refresh();
+(async () => {
+  await seedIfEmpty();
+  await refresh();
+})().catch(console.error);
